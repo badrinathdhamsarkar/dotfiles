@@ -6,6 +6,16 @@ export PATH="/usr/local/bin:$PATH"
 
 alias add_ssh_key="ssh-add --apple-use-keychain ~/.ssh/id_rsa"
 
+# Enable pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Enable virtualenvwrapper if using it
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+source /usr/local/bin/virtualenvwrapper.sh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -110,3 +120,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# # Set the prompt to show username, host, current directory, and virtual environment
+export PROMPT='%F{cyan}%n@%m %F{green}%~ %F{yellow}$(pyenv version-name)%f $(tmux display-message -p "#{session_name}")%f $ '
+
+# Enable virtual environment display
+autoload -U vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+export PS1="%F{cyan}%n@%m %F{green}%~ %F{blue}${vcs_info_msg_0_}%f $ "
