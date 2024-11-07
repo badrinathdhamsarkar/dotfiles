@@ -13,3 +13,5 @@ set number
 
 set backspace=indent,eol,start
 set nocompatible
+
+autocmd BufNewFile,BufRead *.html,*.jinja set filetype=htmldjango
