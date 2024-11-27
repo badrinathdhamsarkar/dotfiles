@@ -18,3 +18,5 @@ eval "$(pyenv init -)"
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 source /usr/local/bin/virtualenvwrapper.sh
+
+alias ls='ls --color=auto'
