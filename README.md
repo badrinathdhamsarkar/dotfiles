@@ -1,1 +1,1 @@
-To use, symlink top level files and directories to ~. Configured for MacOS Monterey.
+To use, symlink top level files and directories to ~. Configured for MacOS Sequoia.
