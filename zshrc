@@ -9,3 +9,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls="ls -G"
 alias ll="ls -lG"
 alias la="ls -laG"
+
+# Git aliases
+alias gitd="git diff"
+alias gitlo="git log --oneline"
+alias gitcam="git commit -am"
