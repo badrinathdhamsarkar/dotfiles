@@ -5,6 +5,8 @@ eval "$(gh copilot alias -- zsh)"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+export CLASSPATH="."
+
 # Color aliases
 alias ls="ls -G"
 alias ll="ls -lG"
